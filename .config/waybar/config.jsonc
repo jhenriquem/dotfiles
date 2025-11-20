@@ -1,0 +1,175 @@
+// -*- mode: jsonc -*-
+{
+        "layer": "top",
+        "height": 40,
+        "spacing": 10,
+        "modules-left": [
+                "hyprland/workspaces"
+        ],
+        "modules-center": [
+                "clock"
+        ],
+        "modules-right": [
+                "pulseaudio",
+                // "network",
+                // "custom/bluetooth",
+                "power-profiles-daemon",
+                "backlight",
+                "custom/btop",
+                "battery",
+                "battery#bat2",
+                "tray",
+                "custom/notification",
+                "custom/power"
+        ],
+        "custom/btop": {
+                "format": "  ",
+                "on-click": "kitty -e btop"
+        },
+        "hyprland/workspaces": {
+                "all-outputs": true,
+                "disable-scroll": true,
+                "format": "{icon}",
+                "warp-on-scroll": false
+        },
+        "keyboard-state": {
+                "numlock": true,
+                "capslock": true,
+                "format": "{name} {icon}",
+                "format-icons": {
+                        "locked": "",
+                        "unlocked": ""
+                }
+        },
+        "sway/scratchpad": {
+                "format": "{icon} {count}",
+                "show-empty": false,
+                "format-icons": [
+                        "",
+                        ""
+                ],
+                "tooltip": true,
+                "tooltip-format": "{app}: {title}"
+        },
+        "custom/notification": {
+                "tooltip": true,
+                "format": "<span size='16pt'>{icon}</span>",
+                "format-icons": {
+                        "notification": "󱅫",
+                        "none": "󰂜",
+                        "dnd-notification": "󰂠",
+                        "dnd-none": "󰪓",
+                        "inhibited-notification": "󰂛",
+                        "inhibited-none": "󰪑",
+                        "dnd-inhibited-notification": "󰂛",
+                        "dnd-inhibited-none": "󰪑"
+                },
+                "return-type": "json",
+                "exec-if": "which swaync-client",
+                "exec": "swaync-client -swb",
+                "on-click": "swaync-client -t -sw",
+                "on-click-right": "swaync-client -d -sw",
+                "escape": true
+        },
+        "clock": {
+                "format": "{:%a, %b %d %Y - %H:%M}",
+                "tooltip-format": "<tt><big>{calendar}</big></tt>",
+                "calendar": {
+                        "mode": "moth",
+                        "mode-mon-col": 3,
+                        "on-scroll": 1,
+                        "on-click-right": "mode"
+                }
+        },
+        "backlight": {
+                "format": "{percent}% {icon}",
+                "format-icons": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                ]
+        },
+        "battery": {
+                "states": {
+                        "warning": 20,
+                        "critical": 15
+                },
+                "format": "{capacity}% {icon}",
+                "format-full": "{capacity}% {icon}",
+                "format-charging": "{capacity}% ",
+                "format-plugged": "{capacity}% {icon}",
+                "format-alt": "{time} {icon}",
+                "format-icons": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                ]
+        },
+        "battery#bat2": {
+                "bat": "BAT2"
+        },
+        "tray": {
+                "icon-size": 21,
+                "spacing": 10,
+                "icons": {
+                        "blueman": "bluetooth",
+                        "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+                }
+        },
+        "custom/bluetooth": {
+                "format": "󰂯 ",
+                "format-icons": {
+                        "on": "󰂯",
+                        "off": "󰂲"
+                },
+                "tooltip": true,
+                "on-click": "blueman-manager",
+                "tooltip-format": "{tooltip}",
+                "interval": 5
+        },
+        "network": {
+                "format-wifi": "   ",
+                "on-click": "nm-applet",
+                "format-ethernet": "{ipaddr}/{cidr} ",
+                "tooltip-format": "{essid}  ",
+                "format-linked": "{ifname} (No IP) ",
+                "tooltip": true,
+                "format-disconnected": "Disconnected ⚠ ",
+                "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        },
+        "pulseaudio": {
+                "format": "{volume}% {icon} {format_source}",
+                "format-bluetooth": "{volume}% {icon} {format_source}",
+                "format-bluetooth-muted": " {icon} {format_source}",
+                "format-muted": " {format_source}",
+                "format-source": "{volume}% ",
+                "format-source-muted": "",
+                "format-icons": {
+                        "headphone": "",
+                        "hands-free": "",
+                        "headset": "",
+                        "phone": "",
+                        "portable": "",
+                        "car": "",
+                        "default": [
+                                "",
+                                "",
+                                ""
+                        ]
+                },
+                "on-click": "pavucontrol"
+        },
+        "custom/power": {
+                "format": " ⏻ ",
+                "tooltip": true,
+                "on-click": "wlogout"
+        }
+}
