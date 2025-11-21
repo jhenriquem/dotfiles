@@ -1,30 +1,4 @@
 return {
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {
-			transparent = true,
-		},
-	},
-	{
-		"H4ckint0sh/nord.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("nord").setup({
-				transparent = true,
-				borders = true,
-
-				on_highlights = function(highlights, colors)
-					highlights.FzfLuaBorder = { bg = colors.none }
-					highlights.Pmenu = { bg = colors.none }
-					highlights.NormalFloat = { bg = colors.none }
-				end,
-			})
-			-- vim.cmd("colorscheme nord")
-		end,
-	},
 
 	{
 		"vague2k/vague.nvim",

@@ -1,20 +1,8 @@
 {
-    "label" : "lock",
-    "action" : "loginctl lock-session",
-    "text" : "Lock",
-    "keybind" : "l"
-}
-{
-    "label" : "hibernate",
-    "action" : "systemctl hibernate",
-    "text" : "Hibernate",
+    "label" : "exit",
+    "action" : "",
+    "text" : "Exit",
     "keybind" : "h"
-}
-{
-    "label" : "logout",
-    "action" : "loginctl terminate-user $USER",
-    "text" : "Logout",
-    "keybind" : "e"
 }
 {
     "label" : "shutdown",
@@ -22,11 +10,24 @@
     "text" : "Shutdown",
     "keybind" : "s"
 }
+
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "systemctl suspend-then-hibernate",
     "text" : "Suspend",
     "keybind" : "u"
+}
+{
+    "label" : "lock",
+    "action" : "hyprlock",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action" : "hyprctl dispatch exit",
+    "text" : "Logout",
+    "keybind" : "e"
 }
 {
     "label" : "reboot",
