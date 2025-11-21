@@ -1,7 +1,9 @@
-# Dotfiles — Setup Hyprland • Arch Linux
+# 🚀 Dotfiles — Setup Hyprland • Arch Linux
 
-Este repositório contém meus **dotfiles pessoais**, configurados para um ambiente minimalista usando **Arch Linux + Hyprland**.  
-O repositório utiliza a técnica de **bare repository**, permitindo versionar arquivos diretamente no `$HOME` sem criar pastas duplicadas.
+![alt text](./assets/screenshort.png) 
+
+Este repositório contém meus **dotfiles pessoais**,
+configurados para um ambiente minimalista usando **Arch Linux + Hyprland**.  
 
 ---
 
@@ -12,7 +14,12 @@ O repositório utiliza a técnica de **bare repository**, permitindo versionar a
 - **Neovim** (configuração personalizada)
 - **Kitty**
 - **Zsh**
+- **Hyprlock / Hypridle** – lockscreen + idle management
+- **Fastfetch** – exibição de informações do sistema
 - Outros scripts e configs do `~/.config`
 
 
+### 📌 Observação
 
+Estes dotfiles são feitos sob medida para o meu ambiente.
+Sinta-se livre para adaptar, melhorar e usar como base para seu próprio setup.
