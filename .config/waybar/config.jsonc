@@ -5,8 +5,9 @@
         "exclusive": true,
         "passthrough": false,
         "gtk-layer-shell": true,
-        "height": 40,
-        "margin": 5,
+        "height": 20,
+        "width": 1850,
+        "margin": 2,
         "modules-left": [
                 "hyprland/workspaces",
                 "hyprland/window"
@@ -15,15 +16,20 @@
                 "clock"
         ],
         "modules-right": [
-                "tray",
-                "network",
+                "custom/battery-alert",
                 "battery",
                 "backlight",
                 "pulseaudio",
+                "tray",
                 "custom/btop",
                 "custom/notification",
                 "custom/power"
         ],
+        "custom/battery-alert": {
+                "exec": "~/.config/waybar/scripts/battery-alert.sh",
+                "interval": 60,
+                "return-type": "none"
+        },
         "hyprland/window": {
                 "format": "󰣇 {}"
         },
@@ -69,8 +75,8 @@
         "battery": {
                 "states": {
                         "good": 95,
-                        "warning": 30,
-                        "critical": 20
+                        "warning": 20,
+                        "critical": 15
                 },
                 "format": "{icon} {capacity}%",
                 "format-charging": " {capacity}%",

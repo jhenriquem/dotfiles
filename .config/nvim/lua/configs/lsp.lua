@@ -1,10 +1,19 @@
 -- Diagnostics
+
+vim.o.updatetime = 200
+
 vim.diagnostic.config({
-	virtual_text = {
-		current_line = true,
-		prefix = "  ",
-	},
 	update_in_insert = true,
+})
+
+vim.api.nvim_create_autocmd("CursorHold", {
+	callback = function()
+		vim.diagnostic.open_float(nil, {
+			focus = false,
+			border = "rounded",
+			source = "always",
+		})
+	end,
 })
 
 -- lsps with default config
