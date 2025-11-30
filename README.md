@@ -11,10 +11,16 @@ configurados para um ambiente minimalista usando **Arch Linux + Hyprland**.
 
 - **Hyprland**
 - **Waybar**
+- **Vicinae** (app laucher)
 - **Neovim** (configuração personalizada)
 - **Kitty**
 - **Zsh**
-- **Hyprlock / Hypridle** – lockscreen + idle management
+- **Swaync** (notification center)
+- **Impala** (wifi tui)
+- **Battop** (battery tui)
+- **Btop**
+- **Zsh**
+- **Hyprlock / Hypridle / Hyprshot / Hyprpicker** – lockscreen + idle management
 - **Fastfetch** – exibição de informações do sistema
 - Outros scripts e configs do `~/.config`
 
