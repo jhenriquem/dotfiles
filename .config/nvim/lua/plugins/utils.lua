@@ -58,6 +58,7 @@ return {
 			require("colorizer").setup()
 		end,
 	},
+	{ "OXY2DEV/markview.nvim", lazy = false },
 	{
 		"nvim-tree/nvim-web-devicons",
 		opts = {

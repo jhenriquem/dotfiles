@@ -16,7 +16,6 @@ opt.undofile = true
 
 o.signcolumn = "yes:2"
 
-opt.termguicolors = true
 opt.ignorecase = true
 opt.swapfile = false
 opt.autoindent = true
@@ -34,7 +33,7 @@ o.shortmess = "acstFOSW"
 o.gdefault = true
 o.inccommand = "split"
 
-o.wrap = false
+o.wrap = true
 o.breakindent = true
 o.smartindent = true
 

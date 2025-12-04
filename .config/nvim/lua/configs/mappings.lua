@@ -1,13 +1,6 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- Diagnostic
-map("n", "-d", "<cmd> lua vim.diagnostic.setloclist()<CR>")
-
--- Fuzzy
-map("n", "-f", ":find ./**/") -- files
-map("n", "-\\", ":buffer ") -- buffers
-
 -- Ntree
 map("n", "<space>b", "<cmd>Ex %:p:h<CR>")
 
@@ -40,8 +33,14 @@ map("n", "<space>k", "<C-w>k")
 map("i", "<a-,>", "$")
 map("i", "<a-.>", "&")
 map("i", "<a-;>", "#")
+
 map("i", ";;", "*")
+
 map("i", ",,", "%")
+
+map("i", "<c-,>", '"<Left>')
+map("i", "<c-.>", "'<Left>")
+map("i", "<c-;>", "!")
 
 map("i", "[[", function()
 	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -59,7 +58,6 @@ end)
 map("i", "]]", ")")
 
 -- map("i", "", ""<Left>")
-map("i", "<a-[>", '""<Left>')
 
 -- Select and copy
 map("n", "<C-a>", "gg<S-v>G")
