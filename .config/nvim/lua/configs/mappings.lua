@@ -38,9 +38,9 @@ map("i", ";;", "*")
 
 map("i", ",,", "%")
 
-map("i", "<c-,>", '"<Left>')
-map("i", "<c-.>", "'<Left>")
-map("i", "<c-;>", "!")
+map("i", "<a-[>", '"')
+map("i", "<a-]>", "'")
+map("i", "<a-/>", "!")
 
 map("i", "[[", function()
 	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -56,8 +56,6 @@ map("i", "[[", function()
 end)
 
 map("i", "]]", ")")
-
--- map("i", "", ""<Left>")
 
 -- Select and copy
 map("n", "<C-a>", "gg<S-v>G")

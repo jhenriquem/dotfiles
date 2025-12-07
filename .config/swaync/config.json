@@ -1,0 +1,104 @@
+{
+        "$schema": "/etc/xdg/swaync/configSchema.json",
+        "positionX": "right",
+        "positionY": "top",
+        "control-center-positionX": "right",
+        "control-center-positionY": "top",
+        "control-center-margin-top": 8,
+        "control-center-margin-bottom": 8,
+        "control-center-margin-right": 8,
+        "control-center-margin-left": 8,
+        "control-center-width": 450,
+        "control-center-height": 1040,
+        "fit-to-screen": false,
+        "layer": "overlay",
+        "cssPriority": "user",
+        "timeout": 3,
+        "timeout-low": 2,
+        "timeout-critical": 0,
+        "notification-window-width": 500,
+        "keyboard-shortcuts": true,
+        "image-visibility": "when-available",
+        "transition-time": 100,
+        "hide-on-clear": true,
+        "hide-on-action": true,
+        "script-fail-notify": true,
+        "widgets": [
+                "menubar#label",
+                "dnd",
+                "inhibitors",
+                "volume",
+                "backlight",
+                "mpris",
+                "title",
+                "notifications"
+        ],
+        "widget-config": {
+                "menubar#label": {
+                        "menu#power-buttons": {
+                                "label": " ⏻ ",
+                                "position": "left",
+                                "actions": [
+                                        {
+                                                "label": " Lock",
+                                                "command": "swaync-client -t -sw && hyprlock"
+                                        },
+                                        {
+                                                "label": "󰍃 Logout",
+                                                "command": "swaync-client -t -sw && hyprctl dispatch exit"
+                                        },
+                                        {
+                                                "label": " Suspend",
+                                                "command": "swaync-client -t -sw && systemctl suspend-then-hibernate"
+                                        },
+                                        {
+                                                "label": " Reboot",
+                                                "command": "swaync-client -t -sw && systemctl reboot"
+                                        },
+                                        {
+                                                "label": "󰐥 Shut down",
+                                                "command": "swaync-client -t -sw && systemctl poweroff"
+                                        }
+                                ]
+                        },
+                        "buttons-grid": {
+                                "actions": [
+                                        {
+                                                "label": " ",
+                                                "command": "kitty -e --class=impala impala"
+                                        },
+                                        {
+                                                "label": "",
+                                                "command": "blueman-manager"
+                                        }
+                                ]
+                        }
+                },
+                "inhibitors": {
+                        "text": "Inhibidores",
+                        "button-text": "Clear All",
+                        "clear-all-button": true
+                },
+                "title": {
+                        "text": "Notifications",
+                        "clear-all-button": true,
+                        "button-text": "Clear All"
+                },
+                "dnd": {
+                        "text": "Do Not Disturb"
+                },
+                "mpris": {
+                        "blacklist": [],
+                        "autohide": true,
+                        "show-album-art": "always",
+                        "loop-carousel": true
+                },
+                "volume": {
+                        "label": "  "
+                },
+                "backlight": {
+                        "label": " 󰃟 ",
+                        "device": "intel_backlight"
+                }
+        }
+}

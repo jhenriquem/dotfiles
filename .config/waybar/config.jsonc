@@ -18,8 +18,8 @@
         "modules-right": [
                 "custom/battery-alert",
                 "battery",
-                "backlight",
-                "pulseaudio",
+                // "backlight",
+                // "pulseaudio",
                 "bluetooth",
                 "network",
                 // "tray",
@@ -55,7 +55,8 @@
                 "format": "{:%A, %d  %I:%M %p}",
                 "interval": 1,
                 "rotate": 0,
-                "tooltip-format": "<tt>{calendar}</tt>",
+                "on-click": "lvsk-calendar-launcher",
+                // "tooltip-format": "<tt>{calendar}</tt>",
                 "calendar": {
                         "mode": "month",
                         "mode-mon-col": 3,
@@ -139,17 +140,6 @@
                 "on-click": "pavucontrol",
                 "scroll-step": 5
         },
-        // "network": {
-        //         "tooltip": true,
-        //         "format-wifi": "  {essid}",
-        //         "format-ethernet": "󰈀 ",
-        //         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-        //         "format-linked": "󰈀 {ifname} (No IP)",
-        //         "format-disconnected": "󰖪 ",
-        //         "tooltip-format-disconnected": "Disconnected",
-        //         "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
-        //         "interval": 2
-        // },
         "network": {
                 "format-icons": [
                         "󰤯",
