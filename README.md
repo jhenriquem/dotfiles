@@ -1,31 +1,32 @@
 # 🚀 Dotfiles — Setup Hyprland • Arch Linux
 
-![alt text](./assets/screenshort.png) 
+![alt text](./assets/screenshort.png)
 
-Este repositório contém meus **dotfiles pessoais**,
-configurados para um ambiente minimalista usando **Arch Linux + Hyprland**.  
+This repository contains my **personal dotfiles**,
+
+configured for a minimalist environment using **Arch Linux + Hyprland**.
 
 ---
 
-## Tecnologias & Ferramentas
+## Technologies & Tools
 
 - **Hyprland**
 - **Waybar**
-- **Vicinae** (app laucher)
-- **Neovim** (configuração personalizada)
+- **Vicinae** (app launcher)
+- **Neovim** (custom configuration)
 - **Kitty**
+- **[Lvsk-calendar](https://github.com/Gianluska/lvsk-calendar)** (terminal calendar) 
 - **Zsh**
 - **Swaync** (notification center)
 - **Impala** (wifi tui)
 - **Battop** (battery tui)
 - **Btop**
-- **Zsh**
-- **Hyprlock / Hypridle / Hyprshot / Hyprpicker** – lockscreen + idle management
-- **Fastfetch** – exibição de informações do sistema
-- Outros scripts e configs do `~/.config`
+- **Wlogout**
+- **Hyprlock / Hypridle / Hyprshot / Hyprpicker** – lockscreen,idle management, screenshort, color picker
+- **Fastfetch** – system information display
+- Other scripts and configs from `~/.config`
 
+### 📌 Note
 
-### 📌 Observação
-
-Estes dotfiles são feitos sob medida para o meu ambiente.
-Sinta-se livre para adaptar, melhorar e usar como base para seu próprio setup.
+These dotfiles are custom-made for my environment.
+Feel free to adapt, improve, and use them as a basis for your own setup.
