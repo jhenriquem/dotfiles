@@ -1,6 +1,6 @@
 # 🚀 Dotfiles — Setup Hyprland • Arch Linux
 
-![alt text](./assets/screenshort.png)
+![alt text](./assets/screenshot.png)
 
 This repository contains my **personal dotfiles**,
 
