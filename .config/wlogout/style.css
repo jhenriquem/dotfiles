@@ -7,13 +7,11 @@
 
 window {
     background-color: rgba( 1 , 1 , 1 , 0.55);
-    /* border-radius: 10px; */
 }
 
 button {
-    background-color: rgba( 1 , 1 , 1 , 0.65);
+    background-color: rgba(41 , 43 , 42 , 0.65);
     border-style: solid;
-    /* border-width: 2px; */
     border-radius: 50px;
     background-repeat: no-repeat;
     background-position: center;
@@ -23,66 +21,32 @@ button {
 
 button:active,
 button:hover {
-    background-color: #cdd6f4;
+    background-color: rgba(49,51,50,0.65);
 }
 
 button:focus {
-    background-color: #cdd6f4;
+    background-color: rgba(49,51,50,0.65);
 }
-
 #lock {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    background-image: image(url("/home/henrique/assets/wlogout/assets/lock.svg"), url("/usr/local/share/wlogout/icons/lock.png"));
 }
-
-#lock:hover {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/lock-hover.png"), url("/usr/local/share/wlogout/icons/lock.png"));
-    color: #11111b;
+#logout{
+    background-image: image(url("/home/henrique/assets/wlogout/assets/logout.svg"), url("/usr/local/share/wlogout/icons/logout.png"));
 }
-
-#logout {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-}
-
-#logout:hover {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/logout-hover.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-    color: #11111b;
-}
-
 #suspend {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/sleep.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+    background-image: image(url("/home/henrique/assets/wlogout/assets/moon.svg"), url("/usr/local/share/wlogout/icons/suspend.png"));
 }
 
-#suspend:hover {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/sleep-hover.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
-    color: #11111b;
+
+#shutdown{
+    background-image: image(url("/home/henrique/assets/wlogout/assets/power.svg"), url("/usr/local/share/wlogout/icons/shutdown.png")); 
 }
 
-#shutdown {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/power.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
-}
-
-#shutdown:hover {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/power-hover.png"), url("/usr/local/share/wlogout/icons/shutdown.png")); 
-    color: #11111b;
-}
-
-#reboot {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/restart.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-}
-
-#reboot:hover {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/restart-hover.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    color: #11111b;
+#reboot{
+    background-image: image(url("/home/henrique/assets/wlogout/assets/reboot.svg"), url("/usr/local/share/wlogout/icons/reboot.png"));
 }
 
 #exit {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/restart.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    background-color: #11111b;
-
+    background-image: image(url("/home/henrique/assets/wlogout/assets/exit.svg"), url("/usr/local/share/wlogout/icons/reboot.png"));
 }
 
-#exit:hover {
-    background-image: image(url("/home/henrique/assets/wlogout/assets/restart-hover.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    color: #11111b;
-    background-color: #cdd6f4;
-}
