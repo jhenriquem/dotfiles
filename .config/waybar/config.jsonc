@@ -10,7 +10,8 @@
         "margin": 5,
         "modules-left": [
                 "hyprland/workspaces",
-                "hyprland/window"
+                "hyprland/window",
+                "custom/player"
         ],
         "modules-center": [
                 "clock"
@@ -20,13 +21,22 @@
                 "battery",
                 // "backlight",
                 // "pulseaudio",
-                "bluetooth",
+                // "bluetooth",
                 "network",
                 // "tray",
                 "custom/btop",
                 "custom/notification",
                 "custom/power"
         ],
+        "custom/player": {
+                "exec": "playerctl metadata --format '  {{ artist }} - {{ title }}'",
+                "interval": 2,
+                "return-type": "string",
+                "max-length": 25,
+                "on-click": "playerctl play-pause",
+                "on-scroll-up": "playerctl next",
+                "on-scroll-down": "playerctl previous"
+        },
         "bluetooth": {
                 "format": "",
                 "format-disabled": "󰂲",
@@ -40,7 +50,8 @@
                 "return-type": "none"
         },
         "hyprland/window": {
-                "format": "󰣇 {}"
+                "format": "󰣇 {}",
+                "max-length": 25
         },
         "hyprland/workspaces": {
                 "disable-scroll": true,
@@ -149,7 +160,7 @@
                         "󰤨"
                 ],
                 "format": "{icon} {essid}",
-                "format-wifi": "{icon}",
+                "format-wifi": "{icon} {essid}",
                 "format-ethernet": "󰀂",
                 "format-disconnected": "󰤮",
                 "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
