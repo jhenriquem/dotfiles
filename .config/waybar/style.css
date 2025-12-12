@@ -12,14 +12,11 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 5px;
+    padding: 5px 10px 0px 5px;
     color: #161817;
-    margin-right: 5px;
+    margin-top: 5px;
 }
 
-#workspaces button.active {
-        color : #5B5D5C;
-}
 
 #window,
 #clock,
@@ -34,14 +31,17 @@ window#waybar {
 #custom-notification,
 #backlight {
     /* background: #1e1e2e; */
-    padding: 0px 10px;
-    margin: 0px 5px;
+    padding: 10px 0px;
+    margin: 5px 0px;
 }
 #backlight {
         padding : 0px;
 margin : 0px;
 }
 
+#custom-power {
+        margin-bottom : 20px;
+}
 
 #workspaces {
     margin-left: 10px;
@@ -55,11 +55,6 @@ margin : 0px;
     margin-right: 60px;
 }
 
-
-
-#battery.charging {
-    color: #26A65B;
-}
 
 @keyframes blink {
     to {

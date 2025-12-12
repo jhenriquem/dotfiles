@@ -64,12 +64,12 @@
                         "buttons-grid": {
                                 "actions": [
                                         {
-                                                "label": " ",
-                                                "command": "kitty -e --class=impala impala"
-                                        },
-                                        {
                                                 "label": "",
                                                 "command": "blueman-manager"
+                                        },
+                                        {
+                                                "label": "  ",
+                                                "command": "kitty -e btop"
                                         }
                                 ]
                         }
