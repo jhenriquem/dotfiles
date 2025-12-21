@@ -65,7 +65,7 @@
                                 "actions": [
                                         {
                                                 "label": "",
-                                                "command": "blueman-manager"
+                                                "command": "kitty -e bluetui"
                                         },
                                         {
                                                 "label": "  ",

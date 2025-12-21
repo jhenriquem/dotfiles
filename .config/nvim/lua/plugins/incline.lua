@@ -8,6 +8,33 @@ local render = function(props)
 	end
 	local ft_icon, ft_color = devicons.get_icon_color(filename)
 
+	local function get_mode()
+		local mode_map = {
+			n = "NORMAL",
+			no = "O-PENDING",
+			i = "INSERT",
+			ic = "INSERT",
+			v = "VISUAL",
+			V = "V-LINE",
+			[""] = "V-BLOCK",
+			c = "COMMAND",
+			cv = "EX",
+			ce = "NORMAL",
+			R = "REPLACE",
+			Rv = "V-REPLACE",
+			s = "SELECT",
+			S = "S-LINE",
+			t = "TERMINAL",
+		}
+
+		local mode_code = vim.api.nvim_get_mode().mode
+		local mode = mode_map[mode_code] or mode_code
+
+		return {
+			" " .. mode .. " ",
+		}
+	end
+
 	local function get_git_diff()
 		local icons = { removed = "-", changed = "~", added = "+" }
 		local signs = vim.b[props.buf].gitsigns_status_dict
@@ -43,13 +70,12 @@ local render = function(props)
 		return label
 	end
 
-	local wakatime = require("../utils/wakatime")
 	return {
 		{ get_diagnostic_label() },
 		{ " ", get_git_diff() },
 		{ "", vim.fn.line("."), "/", vim.fn.charcol(".") },
-		{ " " .. filename .. "", gui = vim.bo[props.buf].modified and "bold,italic" or "bold" },
-		{ " 󱑆 ", wakatime.wakatime() },
+		{ " ", filename .. " ", gui = vim.bo[props.buf].modified and " " or "bold" },
+		{ " ", get_mode() },
 	}
 end
 

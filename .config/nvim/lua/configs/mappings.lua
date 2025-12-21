@@ -32,30 +32,28 @@ map("n", "<space>k", "<C-w>k")
 
 map("i", "<a-,>", "$")
 map("i", "<a-.>", "&")
-map("i", "<a-;>", "#")
+map("i", "<a-;>", '"')
 
-map("i", ";;", "*")
+-- $&"
+-- ()'
+-- *%!
+-- ,.;
+-- <>:
 
+map("i", "<c-,>", "'")
+map("i", "<c-.>", ")")
+map("i", "<c-;>", "(")
+
+map("i", "<a-s-;>", "!")
+map("i", "<a-s-.>", "%")
+map("i", "<a-s-,>", "*")
+
+map("i", ";;", "#")
 map("i", ",,", "%")
-
-map("i", "<a-[>", '"')
-map("i", "<a-]>", "'")
-map("i", "<a-/>", "!")
-
-map("i", "[[", function()
-	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
-	local line = vim.api.nvim_get_current_line()
-
-	if col >= #line or line:sub(col + 1, col + 1):match("%s") then
-		vim.api.nvim_set_current_line(line:sub(1, col) .. "()" .. line:sub(col + 1))
-		vim.api.nvim_win_set_cursor(0, { row, col + 1 })
-	else
-		vim.api.nvim_set_current_line(line:sub(1, col) .. "(" .. line:sub(col + 1))
-		vim.api.nvim_win_set_cursor(0, { row, col + 1 })
-	end
-end)
-
-map("i", "]]", ")")
+map("i", "<Left>", "")
+map("i", "<Right>", "")
+map("i", "<Up>", "")
+map("i", "<Down>", "")
 
 -- Select and copy
 map("n", "<C-a>", "gg<S-v>G")

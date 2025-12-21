@@ -54,6 +54,7 @@
                 "max-length": 25
         },
         "hyprland/workspaces": {
+                "format": "{} ",
                 "disable-scroll": true,
                 "all-outputs": true,
                 "on-click": "activate"
@@ -176,7 +177,7 @@
                 "format": "{icon}",
                 "format-icons": {
                         "notification": "󰎟",
-                        "none": "󰂜",
+                        "none": "󰎟",
                         "dnd-notification": "󰂠",
                         "dnd-none": "󰪓",
                         "inhibited-notification": "󰂛",

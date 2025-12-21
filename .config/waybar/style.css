@@ -12,9 +12,9 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 5px 10px 0px 5px;
-    color: #161817;
+    padding: 5px 0px 0px 0px;
     margin-top: 5px;
+    /* text-align:center; */
 }
 
 

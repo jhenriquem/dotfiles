@@ -16,21 +16,26 @@ vim.api.nvim_create_autocmd("CursorHold", {
 	end,
 })
 
--- lsps with default config
-for _, lsp in ipairs(require("../utils/servers").servers) do
-	vim.lsp.enable(lsp)
-end
-
 -- PYTHON
 vim.lsp.config["pyright"] = {
 	cmd = { "pyright-langserver", "--stdio" },
 	filetypes = { "python" },
 }
+vim.lsp.enable("pyright")
 -- GOLANG
 vim.lsp.config["gopls"] = {
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
 }
+
+vim.lsp.enable("gopls")
+-- C++
+vim.lsp.config["clangd"] = {
+	cmd = { "clangd" },
+	root_markers = { ".clangd", "compile_commands.json" },
+	filetypes = { "c", "cpp" },
+}
+vim.lsp.enable("clangd")
 
 -- MARKDOWN
 vim.lsp.config["marksman"] = {
@@ -38,6 +43,7 @@ vim.lsp.config["marksman"] = {
 	filetypes = { "markdown", "markdown.mdx" },
 }
 
+vim.lsp.enable("marksman")
 -- RUST
 vim.lsp.config("rust_analyzer", {
 	cmd = { "rust-analyzer" },
@@ -50,6 +56,7 @@ vim.lsp.config("rust_analyzer", {
 		},
 	},
 })
+vim.lsp.enable("rust_analyzer")
 
 -- JSON
 vim.lsp.config("jsonls", {
@@ -59,6 +66,7 @@ vim.lsp.config("jsonls", {
 		provideFormatter = true,
 	},
 })
+vim.lsp.enable("jsonls")
 
 -- LUA
 vim.lsp.config("lua_ls", {
@@ -96,3 +104,5 @@ vim.lsp.config("lua_ls", {
 		Lua = {},
 	},
 })
+
+vim.lsp.enable("lua_ls")

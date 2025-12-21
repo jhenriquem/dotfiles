@@ -18,7 +18,6 @@ require("lazy").setup({
 	},
 	install = { colorscheme = { "vague" } },
 })
-
 require("configs.mappings")
 require("configs.lsp")
 require("configs.options")
